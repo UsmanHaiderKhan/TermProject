@@ -11,8 +11,8 @@
        android:layout_height="40dp"
        android:text="First Name:"/>
     <EditText
-        android:layout_width="500px"
-        android:layout_height="100px"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
         android:hint="Please Enter Your Name"/>
 
 
