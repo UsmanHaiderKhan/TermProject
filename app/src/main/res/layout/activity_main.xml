@@ -8,7 +8,7 @@
 
     <EditText
         android:id="@+id/editText3"
-        android:layout_width="wrap_content"
+        android:layout_width="246dp"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/textView"
         android:layout_alignStart="@+id/editText4"
@@ -18,11 +18,11 @@
 
     <EditText
         android:id="@+id/editText4"
-        android:layout_width="wrap_content"
+        android:layout_width="246dp"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
-        android:layout_marginEnd="45dp"
+        android:layout_marginEnd="14dp"
         android:layout_marginTop="15dp"
         android:ems="10"
         android:hint="Enter UserName"
