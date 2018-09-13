@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
                 RelativeLayout.LayoutParams.WRAP_CONTENT
         );
         textViewDetails.addRule(RelativeLayout.CENTER_HORIZONTAL);
-        textViewDetails.setMargins(0,170,0,0);
+        textViewDetails.setMargins(0,100,0,0);
 
 
 
@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         );
         usernameDetails.addRule(RelativeLayout.ABOVE);
         usernameDetails.addRule(RelativeLayout.CENTER_HORIZONTAL);
-        usernameDetails.setMargins(0,430,0,0);
+        usernameDetails.setMargins(0,350,0,0);
 
         //Password Field Styling Here
 
@@ -77,24 +77,24 @@ public class MainActivity extends AppCompatActivity {
         );
         passwordDetail.addRule(RelativeLayout.ABOVE);
         passwordDetail.addRule(RelativeLayout.CENTER_HORIZONTAL);
-        passwordDetail.setMargins(0,670,0,0);
+        passwordDetail.setMargins(0,550,0,0);
 
         //Button Styling Here
 
         Button btn=new Button(this);
         mulayout.setBackgroundColor(Color.MAGENTA);
         btn.setBackgroundColor(Color.BLUE);
-        btn.setText("Click Me");
+        btn.setText("Login");
         btn.setTextColor(Color.WHITE);
         btn.setTextSize(16);
         btn.setWidth(pixel);
-
+        btn.setId(1);
         RelativeLayout.LayoutParams btnDetails= new RelativeLayout.LayoutParams(
                 RelativeLayout.LayoutParams.WRAP_CONTENT,
                 RelativeLayout.LayoutParams.WRAP_CONTENT
         );
         btnDetails.addRule(RelativeLayout.CENTER_HORIZONTAL);
-        btnDetails.setMargins(0,950,0,0);
+        btnDetails.setMargins(0,800,0,0);
 
         // Create An Account Styling Here
         TextView createText=new TextView(this);
@@ -106,9 +106,9 @@ public class MainActivity extends AppCompatActivity {
                 RelativeLayout.LayoutParams.WRAP_CONTENT,
                 RelativeLayout.LayoutParams.WRAP_CONTENT
         );
-        createDetails.addRule(RelativeLayout.ABOVE);
+        createDetails.addRule(RelativeLayout.BELOW,btn.getId());
         createDetails.addRule(RelativeLayout.CENTER_HORIZONTAL);
-        createDetails.setMargins(0,990,0,0);
+        createDetails.setMargins(0,20,0,0);
 
 //        Calling the Methods
 
