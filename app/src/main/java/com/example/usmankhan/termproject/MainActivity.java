@@ -22,14 +22,53 @@ public class MainActivity extends AppCompatActivity {
         Log.i(TAG,"onCreate");
 
         RelativeLayout mulayout=new RelativeLayout(this);
+
+        Resources r=getResources();
+        int pixel=(int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,300,r.getDisplayMetrics());
+
+       //User Name Field Styling Here
+
+        EditText username=new EditText(this);
+        username.setTextColor(Color.WHITE);
+        username.setHint("Enter UserName");
+        username.setHintTextColor(Color.WHITE);
+        username.setWidth(pixel);
+
+        RelativeLayout.LayoutParams usernameDetails=new RelativeLayout.LayoutParams(
+                RelativeLayout.LayoutParams.WRAP_CONTENT,
+                RelativeLayout.LayoutParams.WRAP_CONTENT
+        );
+        usernameDetails.addRule(RelativeLayout.ABOVE);
+        usernameDetails.addRule(RelativeLayout.CENTER_HORIZONTAL);
+        usernameDetails.setMargins(0,150,0,0);
+
+        //Password Field Styling Here
+
+        EditText password=new EditText(this);
+        password.setTextColor(Color.WHITE);
+        password.setHint("Enter Pssword");
+        password.setHintTextColor(Color.WHITE);
+        password.setWidth(pixel);
+
+        RelativeLayout.LayoutParams passwordDetail=new RelativeLayout.LayoutParams(
+                RelativeLayout.LayoutParams.WRAP_CONTENT,
+                RelativeLayout.LayoutParams.WRAP_CONTENT
+        );
+        passwordDetail.addRule(RelativeLayout.ABOVE);
+        passwordDetail.addRule(RelativeLayout.CENTER_HORIZONTAL);
+        passwordDetail.setMargins(0,400,0,0);
+
+        //Button Styling Here
+
         Button btn=new Button(this);
-
-
-
         mulayout.setBackgroundColor(Color.MAGENTA);
         btn.setBackgroundColor(Color.BLUE);
         btn.setText("Click Me");
         btn.setTextColor(Color.WHITE);
+        btn.setTextSize(16);
+        btn.setWidth(pixel);
+
+
 
         RelativeLayout.LayoutParams btnDetails= new RelativeLayout.LayoutParams(
                 RelativeLayout.LayoutParams.WRAP_CONTENT,
@@ -38,29 +77,10 @@ public class MainActivity extends AppCompatActivity {
         btnDetails.addRule(RelativeLayout.CENTER_HORIZONTAL);
         btnDetails.addRule(RelativeLayout.CENTER_VERTICAL);
 
-        EditText username=new EditText(this);
-        username.setTextColor(Color.WHITE);
-        username.setHint("Enter UserName");
-        username.setHintTextColor(Color.WHITE);
-        btn.setId(1);
-        username.setId(2);
-
-        RelativeLayout.LayoutParams usernameDetails=new RelativeLayout.LayoutParams(
-                RelativeLayout.LayoutParams.WRAP_CONTENT,
-                RelativeLayout.LayoutParams.WRAP_CONTENT
-        );
-        usernameDetails.addRule(RelativeLayout.ABOVE,btn.getId());
-        usernameDetails.addRule(RelativeLayout.CENTER_HORIZONTAL);
-        usernameDetails.setMargins(0,0,0,50);
-        Resources r=getResources();
-        int pixel=(int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,300,r.getDisplayMetrics());
-        username.setWidth(pixel);
-
-        EditText password=new EditText(this);
-        password.setTextColor(Color.WHITE);
 
 
 
+        mulayout.addView(password,passwordDetail);
         mulayout.addView(username,usernameDetails);
         mulayout.addView(btn,btnDetails);
         setContentView(mulayout);
