@@ -9,6 +9,7 @@ import android.util.TypedValue;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,6 +27,26 @@ public class MainActivity extends AppCompatActivity {
         Resources r=getResources();
         int pixel=(int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,300,r.getDisplayMetrics());
 
+        // Text View Styling Here
+
+        TextView textView=new TextView(this);
+        textView.setText("LK' Application");
+        textView.setTextColor(Color.rgb(92, 244, 65));
+        textView.setTextSize(35);
+
+        RelativeLayout.LayoutParams textViewDetails=new RelativeLayout.LayoutParams(
+                RelativeLayout.LayoutParams.WRAP_CONTENT,
+                RelativeLayout.LayoutParams.WRAP_CONTENT
+        );
+        textViewDetails.addRule(RelativeLayout.CENTER_HORIZONTAL);
+        textViewDetails.setMargins(0,170,0,0);
+
+
+
+
+
+
+
        //User Name Field Styling Here
 
         EditText username=new EditText(this);
@@ -40,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         );
         usernameDetails.addRule(RelativeLayout.ABOVE);
         usernameDetails.addRule(RelativeLayout.CENTER_HORIZONTAL);
-        usernameDetails.setMargins(0,150,0,0);
+        usernameDetails.setMargins(0,430,0,0);
 
         //Password Field Styling Here
 
@@ -56,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
         );
         passwordDetail.addRule(RelativeLayout.ABOVE);
         passwordDetail.addRule(RelativeLayout.CENTER_HORIZONTAL);
-        passwordDetail.setMargins(0,400,0,0);
+        passwordDetail.setMargins(0,670,0,0);
 
         //Button Styling Here
 
@@ -68,18 +89,31 @@ public class MainActivity extends AppCompatActivity {
         btn.setTextSize(16);
         btn.setWidth(pixel);
 
-
-
         RelativeLayout.LayoutParams btnDetails= new RelativeLayout.LayoutParams(
                 RelativeLayout.LayoutParams.WRAP_CONTENT,
                 RelativeLayout.LayoutParams.WRAP_CONTENT
         );
         btnDetails.addRule(RelativeLayout.CENTER_HORIZONTAL);
-        btnDetails.addRule(RelativeLayout.CENTER_VERTICAL);
+        btnDetails.setMargins(0,950,0,0);
 
+        // Create An Account Styling Here
+        TextView createText=new TextView(this);
+        createText.setText("Create An Account...! SignUp");
+        createText.setTextColor(Color.WHITE);
+        createText.setTextSize(15);
 
+        RelativeLayout.LayoutParams createDetails=new RelativeLayout.LayoutParams(
+                RelativeLayout.LayoutParams.WRAP_CONTENT,
+                RelativeLayout.LayoutParams.WRAP_CONTENT
+        );
+        createDetails.addRule(RelativeLayout.ABOVE);
+        createDetails.addRule(RelativeLayout.CENTER_HORIZONTAL);
+        createDetails.setMargins(0,990,0,0);
 
+//        Calling the Methods
 
+        mulayout.addView(createText,createDetails);
+        mulayout.addView(textView,textViewDetails);
         mulayout.addView(password,passwordDetail);
         mulayout.addView(username,usernameDetails);
         mulayout.addView(btn,btnDetails);
