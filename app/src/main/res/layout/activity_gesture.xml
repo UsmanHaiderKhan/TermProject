@@ -2,8 +2,18 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pak_text"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".GestureActivity">
 
+
+    <TextView
+        android:id="@+id/pak_text"
+        android:layout_width="211dp"
+        android:layout_height="70dp"
+        android:text="@string/pakistan"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="64dp"
+        tools:layout_editor_absoluteY="33dp" />
 </android.support.constraint.ConstraintLayout>
