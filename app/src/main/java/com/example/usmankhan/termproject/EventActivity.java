@@ -16,13 +16,24 @@ public class EventActivity extends AppCompatActivity {
         setContentView(R.layout.activity_event);
 
 
-        Button btn_click=(Button) findViewById(R.id.btn_click);
+        Button btn_click = (Button) findViewById(R.id.btn_click);
+
         btn_click.setOnClickListener(
-                new Button.OnClickListener(){
-                    public void onClick(View view)
-                    {
-                        TextView text_hello=(TextView) findViewById(R.id.text_hello);
+                new Button.OnClickListener() {
+                    public void onClick(View view) {
+                        TextView text_hello = (TextView) findViewById(R.id.text_hello);
                         text_hello.setText("Clicked By Usman");
+                    }
+                }
+        );
+
+        btn_click.setOnLongClickListener(
+                new Button.OnLongClickListener() {
+                    @Override
+                    public boolean onLongClick(View v) {
+                        TextView text_hello = (TextView) findViewById(R.id.text_hello);
+                        text_hello.setText("Long Pressed Text");
+                        return true;
                     }
                 }
         );
