@@ -8,12 +8,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class TopSectionFargement extends Fragment {
+public class BottomPictureFragement extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.top_section_fargement, container, false);
+        View view = inflater.inflate(R.layout.bottom_picture_fragement, container, false);
         return view;
-
     }
 }
