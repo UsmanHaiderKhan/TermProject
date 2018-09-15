@@ -11,5 +11,13 @@
         android:layout_marginTop="15dp"
         android:width="310dp" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="55dp"
+        android:id="@+id/button"
+        android:text="search"
+        android:width="300dp" />
 
 </RelativeLayout>
